@@ -3,24 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator</title>
+    <title>Healthcare Clinic</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
 </head>
 <body>
-    <div class="calculator">
-        <h1>BMI Calculator</h1>
-        <div class="input-group">
-            <label for="height">Height (cm):</label>
-            <input type="number" id="height" placeholder="Enter height in centimeters">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Healthcare Clinic</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#bmi-calculator">BMI Calculator</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <div class="input-group">
-            <label for="weight">Weight (kg):</label>
-            <input type="number" id="weight" placeholder="Enter weight in kilograms">
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" data-aos="fade-up">
+        <div class="container">
+            <h1>Welcome to Our Healthcare Clinic</h1>
+            <p>Your health is our priority. We provide top-notch medical services for you and your family.</p>
         </div>
-        <button onclick="calculateBMI()">Calculate BMI</button>
-        <div id="result"></div>
-    </div>
+    </section>
+
+    <!-- About/Services Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a team of dedicated healthcare professionals offering a wide range of medical services to ensure your well-being.</p>
+            <h3>Our Services</h3>
+            <ul>
+                <li>General Check-ups</li>
+                <li>Specialist Consultations</li>
+                <li>Diagnostic Services</li>
+                <li>Health and Wellness Programs</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- BMI Calculator Section -->
+    <section id="bmi-calculator" class="bmi-calculator">
+        <div class="container">
+            <h2>BMI Calculator</h2>
+            <div class="calculator">
+                <div class="input-group">
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" placeholder="Enter height in centimeters">
+                </div>
+                <div class="input-group">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" placeholder="Enter weight in kilograms">
+                </div>
+                <button onclick="calculateBMI()">Calculate BMI</button>
+                <div id="result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
-</html> 
+</html>
