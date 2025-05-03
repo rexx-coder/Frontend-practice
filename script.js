@@ -57,4 +57,37 @@ function getBMIRange(category) {
         default:
             return '';
     }
-} 
+}
+
+function sendEmail(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Validate form inputs
+    if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // EmailJS configuration
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        from_name: name,
+        from_email: email,
+        message: message
+    })
+    .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Your message has been sent successfully!');
+        // Clear the form
+        document.getElementById('contact-form').reset();
+    }, (error) => {
+        console.log('FAILED...', error);
+        alert('There was an error sending your message. Please try again later.');
+    });
+}
+
+// Attach the sendEmail function to the form submission
+document.getElementById('contact-form').addEventListener('submit', sendEmail); 
