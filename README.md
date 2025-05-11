@@ -1,53 +1,67 @@
-# BMI Calculator
+# Business Manager
 
-A simple and user-friendly Body Mass Index (BMI) calculator web application that helps users determine their BMI category and provides personalized health suggestions.
+A full-stack web application built with Convex, React, and TailwindCSS for managing business websites and social media content.
 
 ## Features
 
-- Calculates BMI based on height and weight inputs
-- Validates user inputs for positive numbers
-- Displays BMI category and range
-- Provides personalized health suggestions based on BMI category
-- Responsive design for all devices
+- **Website Builder**
+  - Create and manage multiple websites
+  - Choose from different templates (Business, Restaurant, Portfolio)
+  - Real-time collaborative editing
+  - Live preview of changes
 
-## How to Use
+- **Social Media Manager**
+  - AI-powered content generation
+  - Schedule posts for multiple platforms
+  - SEO optimization suggestions
+  - Support for Instagram and Facebook
 
-1. Open [bmi-calculator.html](cci:7://file:///c:/Users/prith/.windsurf/bmi-calculator.html:0:0-0:0) in a web browser
-2. Enter your height in centimeters
-3. Enter your weight in kilograms
-4. Click the "Calculate BMI" button
-5. View your BMI result, category, and personalized health suggestions
+## Tech Stack
 
-## BMI Categories
+- **Frontend**: React + Vite
+- **Backend**: Convex (Database, Functions, Auth)
+- **Styling**: TailwindCSS with neon theme
+- **AI**: OpenAI GPT-4.1-nano for content generation
+- **Auth**: Username/password + anonymous login
 
-- Underweight: BMI < 18.5
-- Normal weight: BMI 18.5 - 24.9
-- Overweight: BMI 25.0 - 29.9
-- Obese: BMI ≥ 30.0
+## Getting Started
 
-## File Structure
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Open `http://localhost:5173` in your browser
 
-- [bmi-calculator.html](cci:7://file:///c:/Users/prith/.windsurf/bmi-calculator.html:0:0-0:0): Main HTML file
-- [script.js](cci:7://file:///c:/Users/prith/.windsurf/script.js:0:0-0:0): JavaScript file containing BMI calculation logic
-- `styles.css`: CSS file for styling
+## Environment Variables
 
-## Requirements
+Required environment variables:
+- `CONVEX_DEPLOYMENT`: Set automatically by Convex
+- `CONVEX_OPENAI_API_KEY`: For AI content generation
+- `CONVEX_OPENAI_BASE_URL`: OpenAI API endpoint
 
-- Modern web browser (Chrome, Firefox, Safari, etc.)
-- No additional software required
+## Project Structure
 
-## Contributing
+```
+/convex
+  /schema.ts     # Database schema
+  /websites.ts   # Website management functions
+  /social.ts     # Social media functions
+/src
+  /App.tsx       # Main application component
+  /WebsiteBuilder.tsx  # Website management UI
+  /SocialManager.tsx   # Social media management UI
+```
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+## Authentication
 
-## License
+The app uses Convex Auth with:
+- Email/password authentication
+- Anonymous login support
+- Protected routes and data access
 
-This project is open source and available under the MIT License.
+## Styling
 
-## Credits
-
-Created by [Your Name]
+Features a dark mode theme with:
+- Neon accents (cyan, purple)
+- Hover animations
+- Responsive design
+- Loading states
